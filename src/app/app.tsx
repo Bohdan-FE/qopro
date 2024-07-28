@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 import SharedLayout from './componens/SharedLayout/SharedLayout';
 import { RestrictedRoute } from './componens/Routes/RestrictedRoutes';
@@ -11,14 +11,14 @@ const MainPage = lazy(() => import('../pages/Main/MainPage'));
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<SharedLayout />}>
-          <Route index element={<RestrictedRoute redirectTo='/user' component={<MainPage />} />}></Route>
-          <Route path='/user' element={<PrivateRoute redirectTo='/' component={<UserPage />} />}></Route>
-        </Route>
-      </Routes>
-    </BrowserRouter >
+
+    <Routes>
+      <Route path='/' element={<SharedLayout />}>
+        <Route index element={<RestrictedRoute redirectTo='/user' component={<MainPage />} />}></Route>
+        <Route path='/user' element={<PrivateRoute redirectTo='/' component={<UserPage />} />}></Route>
+      </Route>
+    </Routes>
+
   );
 }
 

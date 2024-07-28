@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import App from './app/app';
+import { MemoryRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -10,10 +11,12 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <StrictMode>
-    <Provider store={store}>
+    <MemoryRouter>
+      <Provider store={store}>
 
-      <App />
+        <App />
 
-    </Provider>
+      </Provider>
+    </MemoryRouter>
   </StrictMode>
 );
