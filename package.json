@@ -2,10 +2,7 @@
   "name": "@qopro/source",
   "version": "0.0.0",
   "license": "MIT",
-  "homepage": "https://Bohdan-FE.github.io/qopro",
   "scripts": {
-    "predeploy": "nx build",
-    "deploy": "gh-pages -d dist/qopro",
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test"
@@ -15,7 +12,6 @@
     "@reduxjs/toolkit": "^2.2.7",
     "ethers": "^6.13.2",
     "framer-motion": "^11.3.19",
-    "gh-pages": "^6.1.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-loader-spinner": "^6.1.6",
