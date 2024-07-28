@@ -12,7 +12,7 @@ const MainPage = lazy(() => import('../pages/Main/MainPage'));
 function App() {
   return (
     <Routes>
-      <Route path='/' element={<SharedLayout />}>
+      <Route path='/qopro' element={<SharedLayout />}>
         <Route index element={<RestrictedRoute redirectTo='/user' component={<MainPage />} />}></Route>
         <Route path='/user' element={<PrivateRoute redirectTo='/' component={<UserPage />} />}></Route>
       </Route>
