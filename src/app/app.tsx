@@ -1,13 +1,22 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
+import { Route, Routes } from 'react-router-dom';
+import { lazy } from 'react';
+import SharedLayout from './componens/SharedLayout/SharedLayout';
+import { RestrictedRoute } from './componens/Routes/RestrictedRoutes';
+import { PrivateRoute } from './componens/Routes/PrivateRoute';
 
-import NxWelcome from './nx-welcome';
+const UserPage = lazy(() => import('../pages/User/UserPage'));
 
-export function App() {
+const MainPage = lazy(() => import('../pages/Main/MainPage'));
+
+
+function App() {
   return (
-    <div>
-      <NxWelcome title="qopro" />
-    </div>
+    <Routes>
+      <Route path='/' element={<SharedLayout />}>
+        <Route index element={<RestrictedRoute redirectTo='/user' component={<MainPage />} />}></Route>
+        <Route path='/user' element={<PrivateRoute redirectTo='/' component={<UserPage />} />}></Route>
+      </Route>
+    </Routes>
   );
 }
 

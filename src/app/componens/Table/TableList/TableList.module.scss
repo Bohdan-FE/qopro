@@ -1,0 +1,19 @@
+.table_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 47.5px;
+    row-gap: 10px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+   padding-top: 14.5px;
+   padding-right: 4px;
+
+    .svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+
+}

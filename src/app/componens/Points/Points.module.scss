@@ -1,0 +1,67 @@
+.points_wrapper{
+    width: 399px;
+    margin-left: auto;
+    margin-right: 192px;
+    margin-top: 8px;
+}
+
+.pints_title{
+    text-align: center;
+    font-size: 36px;
+    line-height: 33px;
+    margin-bottom: 10px;
+    span{
+        color: #A0FB2D;
+    }
+}
+
+.points_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    width: 399px;
+    background-image: url(../../../styles/icons/points-contoiter.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 4px;
+}
+
+.point_container_text{
+    font-family: RedHatDisplay;
+    font-size: 20px;
+    line-height: 33px;
+    span{
+        color: #A0FB2D;
+    }
+}
+
+.points_link{
+    display: block;
+    width:fit-content;
+    margin-left: auto;
+    font-family: RedHatDisplay;
+    font-size: 20px;
+    line-height: 33px;
+    display: block;
+    text-align: end;
+    margin-right: 60px;
+    overflow: hidden;
+    cursor: pointer;
+    
+    &:hover, &:focus{
+        &::after{
+            transform: translate(0);
+        }
+    } 
+    &::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+}

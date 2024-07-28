@@ -1,0 +1,47 @@
+.item {
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    width: 680.5px;
+    height: 64px;
+    clip-path: url(#my-clip-path);
+    padding-left: 70px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    position: relative;
+
+    &:hover,
+    &:focus {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+   .item.active_item {
+       background: none;
+
+       &::before {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background-image: url(../../../../styles/icons/active-user-border.svg);
+       }
+   }
+
+.tier_text {
+    font-family: RedHatDisplay;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -4%;
+    color: #A0FB2D;
+    margin-right: 96px;
+}
+
+.name_text {
+    font-family: RedHatDisplay;
+    font-size: 16px;
+    letter-spacing: -4%;
+    margin-left: 17px;
+}

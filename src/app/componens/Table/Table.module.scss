@@ -1,0 +1,94 @@
+.table_wrapper {
+    width: 1484px;
+    height: 1517px;
+    background-image: url(../../../styles/icons/table-background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: calc(141px - 34px);
+    margin-left: auto;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 176px;
+        background: linear-gradient(0deg, rgba(30, 25, 40, 1) 0%, rgba(30, 25, 40, 0) 100%);
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        right: -44px;
+        top: -4px;
+        width: 69px;
+        height: 69px;
+        border-top: 1px solid rgba(250, 250, 250, 0.5);
+        border-right: 1px solid rgba(250, 250, 250, 0.5);
+    }
+}
+
+.btns_container {
+    position: absolute;
+    top: -55px;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    height: 130px;
+    transform-origin: 100% 100%;
+    transform: translateX(-100%) rotate(-90deg);
+}
+
+.table_title_wrapper {
+    display: flex;
+    gap: 25px;
+    padding: 16px 35px;
+}
+
+.table_title {
+    font-family: RedHatDisplay;
+    font-size: 20px;
+    line-height: 33px;
+}
+
+.table_title_2 {
+    font-family: StretchPRo;
+    font-size: 20px;
+    line-height: 33px;
+    background: linear-gradient(0deg, rgba(145, 95, 255, 1) 0%, rgba(112, 47, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.table_header_container {
+    display: flex;
+    gap: 47px;
+    padding: 0 22px 0 32px;
+    margin-top: 28px;
+    .table_header {
+        display: flex;
+        padding-left: 73px;
+        width: 100%;
+
+        >p {
+            font-family: RedHatDisplay;
+            font-size: 12px;
+            line-height: 23.2px;
+            color: rgba(250, 250, 250, 0.5);
+        }
+    }
+
+    .bank {
+        margin-right: 101px;
+    }
+}
+
+.list_container{
+    height: calc(100% - 117.5px);
+    padding-left: 32px;
+    padding-right: 16.79px;
+    overflow-y: hidden;
+}
